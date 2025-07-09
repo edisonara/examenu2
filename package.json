@@ -1,0 +1,30 @@
+{
+  "name": "todo-api-clean-architecture",
+  "version": "1.0.0",
+  "description": "RESTful To-Do API built with Node.js, Express, MongoDB and Clean Architecture principles",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [
+    "todo",
+    "rest",
+    "express",
+    "mongodb",
+    "clean-architecture"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.5.1",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.3.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
