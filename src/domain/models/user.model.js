@@ -17,8 +17,20 @@ const userSchema = new mongoose.Schema(
     },
     password: {
       type: String,
-      required: true,
-      minlength: 6
+      required: function() { return !this.isOAuth; },
+      minlength: [6, 'Password must be at least 6 characters long']
+    },
+    isOAuth: {
+      type: Boolean,
+      default: false
+    },
+    avatar: {
+      type: String
+    },
+    provider: {
+      type: String,
+      enum: ['local', 'google', 'github'],
+      default: 'local'
     }
   },
   { timestamps: true }
